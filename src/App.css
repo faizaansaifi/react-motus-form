@@ -1,0 +1,461 @@
+* {
+  box-sizing: border-box; }
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(99, 99, 99, 0.41);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  background: #ffffff;
+  padding: 5px 50px; }
+  header .child1 {
+    display: flex; }
+    header .child1 .logo {
+      display: inline-block;
+      width: 100px;
+      height: 35px;
+      background: url("logo/logo.png") no-repeat;
+      background-size: contain; }
+  header ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    header ul li {
+      display: inline-block;
+      color: #656565;
+      padding: 8px 10px; }
+      header ul li:nth-child(1) {
+        margin-left: 15px; }
+      header ul li a {
+        color: #656565;
+        font-weight: 400;
+        text-decoration: none; }
+
+.heading {
+  height: 90px;
+  text-align: center;
+  background: #eaeaea7a;
+  color: #696060;
+  padding: 1px 0;
+  margin-top: 60px; }
+  .heading h4 {
+    font-weight: 400;
+    font-size: 22px; }
+
+.form-fillup-section {
+  margin-top: 20px; }
+
+.buttons-at-bottom {
+  padding: 10px 150px; }
+  .buttons-at-bottom button {
+    height: 30px;
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer; }
+  .buttons-at-bottom .left, .buttons-at-bottom .right {
+    background: #00afed; }
+  .buttons-at-bottom .right {
+    float: right; }
+
+.footer {
+  height: 50px;
+  background: dimgrey;
+  color: white;
+  font-size: 12px;
+  padding: 20px; }
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px; }
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border: 1px solid #00afed; }
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: 2px solid #00afed;
+  border-radius: 5px; }
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc; }
+
+/* When the checkbox is checked, add a white background */
+.container input:checked ~ .checkmark {
+  background-color: #fff; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block; }
+
+.container input:checked {
+  border: 1px solid #00afed; }
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #00afed;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg); }
+
+/* The container */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px; }
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer; }
+
+/* Create a custom radio button */
+.radioDot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  border: 2px solid #ccc; }
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radioDot {
+  background-color: #fff; }
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radioDot:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radioDot:after {
+  display: block; }
+
+/* Style the indicator (dot/circle) */
+.radio-container .radioDot:after {
+  top: 1px;
+  left: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00afed; }
+
+.form1-container {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 100px; }
+  .form1-container .car-progress-bar {
+    width: 15%;
+    height: 4px;
+    background: dodgerblue;
+    margin: 0 auto;
+    transition: 1s;
+    position: absolute;
+    left: 26%;
+    top: 23%; }
+    .form1-container .car-progress-bar .step1 {
+      position: absolute;
+      top: -8px;
+      left: 70%; }
+  .form1-container .car-default-bar {
+    width: 625px;
+    height: 4px;
+    background: rgba(159, 159, 159, 0.5);
+    position: absolute;
+    margin: 0 auto;
+    left: 26%;
+    top: 23%; }
+    .form1-container .car-default-bar .step2, .form1-container .car-default-bar .step3 {
+      color: white;
+      width: 20px;
+      height: 20px;
+      background: grey;
+      border: 1px solid white;
+      border-radius: 50%;
+      position: absolute;
+      padding: 0 5px; }
+    .form1-container .car-default-bar .step1-heading, .form1-container .car-default-bar .step2-heading, .form1-container .car-default-bar .step3-heading {
+      position: absolute;
+      color: dodgerblue;
+      font-size: 12px;
+      font-weight: 500;
+      top: 30px; }
+    .form1-container .car-default-bar .step1-heading {
+      left: 19%; }
+    .form1-container .car-default-bar .step2-heading {
+      left: 45%; }
+    .form1-container .car-default-bar .step3-heading {
+      left: 70%; }
+    .form1-container .car-default-bar .step2 {
+      top: -7px;
+      left: 50%; }
+    .form1-container .car-default-bar .step3 {
+      top: -7px;
+      left: 75%; }
+  .form1-container form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px; }
+    .form1-container form h5 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.48);
+      width: 335px;
+      padding-bottom: 10px; }
+    .form1-container form input, .form1-container form select {
+      width: 70%;
+      height: 35px;
+      margin-top: 5px;
+      margin-bottom: 25px;
+      border-radius: 5px;
+      border: 1px solid rgba(128, 128, 128, 0.48);
+      background: none; }
+    .form1-container form .state_zip {
+      display: flex;
+      width: 335px;
+      height: 80px;
+      justify-content: space-between; }
+      .form1-container form .state_zip .state, .form1-container form .state_zip select {
+        width: 100px; }
+      .form1-container form .state_zip .zip, .form1-container form .state_zip input {
+        width: 220px; }
+  .form1-container .form-head {
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    background: #826f6f21;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 0; }
+  .form1-container .form-head, .form1-container form {
+    padding-left: 100px; }
+
+.applyProduct {
+  width: 30%;
+  margin: 0 auto; }
+  .applyProduct .car-progress-bar {
+    width: 26%;
+    height: 4px;
+    background: dodgerblue;
+    margin: 0 auto;
+    transition: 1s;
+    position: absolute;
+    left: 26%;
+    top: 23%; }
+    .applyProduct .car-progress-bar .step2 {
+      position: absolute;
+      left: 290px;
+      top: -10px; }
+  .applyProduct .car-default-bar {
+    width: 625px;
+    height: 4px;
+    background: rgba(159, 159, 159, 0.5);
+    position: absolute;
+    margin: 0 auto;
+    left: 26%;
+    top: 23%; }
+    .applyProduct .car-default-bar .step2, .applyProduct .car-default-bar .step3 {
+      color: white;
+      width: 20px;
+      height: 20px;
+      background: grey;
+      border: 1px solid white;
+      border-radius: 50%;
+      position: absolute;
+      padding: 0 5px; }
+    .applyProduct .car-default-bar .step1-heading, .applyProduct .car-default-bar .step2-heading, .applyProduct .car-default-bar .step3-heading {
+      position: absolute;
+      color: dodgerblue;
+      font-size: 12px;
+      font-weight: 500;
+      top: 30px; }
+    .applyProduct .car-default-bar .step1-heading {
+      left: 15%; }
+    .applyProduct .car-default-bar .step2-heading {
+      left: 45%; }
+    .applyProduct .car-default-bar .step3-heading {
+      left: 75%; }
+    .applyProduct .car-default-bar .step1 {
+      top: -10px;
+      position: absolute;
+      z-index: 1;
+      left: 20%; }
+    .applyProduct .car-default-bar .step3 {
+      top: -7px;
+      right: 16%; }
+  .applyProduct .enabledProducts {
+    margin: 100px 0 40px 0;
+    padding-left: 40px; }
+    .applyProduct .enabledProducts h3 {
+      margin-left: -40px; }
+
+.container {
+  padding-left: 40px; }
+
+.fixedVariableRate {
+  padding-left: 40px; }
+  .fixedVariableRate ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    .fixedVariableRate ul p {
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      color: dimgrey; }
+  .fixedVariableRate input {
+    float: left; }
+
+.annualTax {
+  padding-left: 40px; }
+
+.driver span {
+  color: #6e5528;
+  font-size: 14px;
+  font-weight: 500; }
+
+.form3-container {
+  padding: 100px 50px; }
+  .form3-container .car-progress-bar {
+    width: 37%;
+    height: 4px;
+    background: dodgerblue;
+    margin: 0 auto;
+    transition: 1s;
+    position: absolute;
+    left: 26%;
+    top: 23%; }
+    .form3-container .car-progress-bar .step3 {
+      position: absolute;
+      top: -8px;
+      left: 92%; }
+  .form3-container .car-default-bar {
+    width: 625px;
+    height: 4px;
+    background: rgba(159, 159, 159, 0.5);
+    position: absolute;
+    margin: 0 auto;
+    left: 26%;
+    top: 23%; }
+    .form3-container .car-default-bar .step1, .form3-container .car-default-bar .step2 {
+      z-index: 2;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      padding: 0 5px;
+      top: -15px; }
+    .form3-container .car-default-bar .step1-heading, .form3-container .car-default-bar .step2-heading, .form3-container .car-default-bar .step3-heading {
+      position: absolute;
+      color: dodgerblue;
+      font-size: 12px;
+      font-weight: 500;
+      top: 30px; }
+    .form3-container .car-default-bar .step1-heading {
+      left: 19%; }
+    .form3-container .car-default-bar .step2-heading {
+      left: 45%; }
+    .form3-container .car-default-bar .step3-heading {
+      left: 70%; }
+    .form3-container .car-default-bar .step2 {
+      left: 50%; }
+    .form3-container .car-default-bar .step1 {
+      left: 25%; }
+  .form3-container .detail-container {
+    border: 1px solid #dad7d7;
+    border-radius: 5px;
+    box-shadow: 1px 1px 14px #c1bebeb3; }
+  .form3-container .form3-heading {
+    height: 80px;
+    border-bottom: 1px solid #dad7d7; }
+    .form3-container .form3-heading .child {
+      margin-left: 15px;
+      margin-top: 30px;
+      display: inline-block;
+      /* border: 1px solid; */
+      width: 250px; }
+    .form3-container .form3-heading .specialChild {
+      width: 350px; }
+      .form3-container .form3-heading .specialChild .sub-child1, .form3-container .form3-heading .specialChild .sub-child2 {
+        display: inline-block; }
+      .form3-container .form3-heading .specialChild .sub-child2 {
+        float: right;
+        width: 72px;
+        margin-left: 50px;
+        margin-top: -10px;
+        clear: both; }
+  .form3-container .contact-component-section {
+    padding: 30px 0;
+    border-bottom: 1px solid #dad7d7; }
+  .form3-container .finance-contact-info .date-and-finance {
+    display: inline-block;
+    width: 350px; }
+    .form3-container .finance-contact-info .date-and-finance .date-child {
+      width: 200px; }
+    .form3-container .finance-contact-info .date-and-finance .radio-child {
+      width: 10px;
+      float: right;
+      margin-right: 25px; }
+    .form3-container .finance-contact-info .date-and-finance .radio-container {
+      display: inline-block;
+      cursor: pointer;
+      margin-left: 90px; }
+  .form3-container .finance-contact-info input {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid #dad7d7;
+    border-radius: 2px; }
+  .form3-container .add-more-section {
+    height: 50px;
+    padding: 15px 15px; }
+    .form3-container .add-more-section button {
+      border-radius: 50%;
+      border: 1px solid grey;
+      background: none;
+      color: grey; }
+
+/*# sourceMappingURL=App.css.map */
